@@ -12,3 +12,10 @@ console.log(typeof valueInNumber);
 // null => 0
 // undefine => NaN
 // boolean => 0/1
+
+
+
+let str1 = "hello"
+let str2 =" prince"
+let str3 = str1+str2
+console.log(str3)
