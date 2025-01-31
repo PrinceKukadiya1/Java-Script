@@ -23,12 +23,15 @@ Non-Premitive(Reference)
 
 // Example
 const heros = ["Spiderman","Betman","shaktiman"]
+console.log(heros)
 
 let myobj = {
     No : 22,
     name : "prince"
 }
+console.log(myobj)
 
 const myfunction = function(){
     console.log("Hello")
 }
+myfunction();
