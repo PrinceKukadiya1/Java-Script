@@ -35,3 +35,8 @@ const myfunction = function(){
     console.log("Hello")
 }
 myfunction();
+
+
+// memory in javascript
+
+// 1)stack(primitive) ,2)Heap(Non-primitive)
