@@ -1,4 +1,4 @@
-// single
+// singleton
 
 // object literals
 const myobj = {
