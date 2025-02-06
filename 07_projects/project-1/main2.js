@@ -12,7 +12,7 @@ cchanger.forEach(function (btn) {
 
         const color = event.target.id
         switch (color) {
-            case 'grey':
+            case 'yellowgreen':
                 body.style.backgroundColor = event.target.id
                 break;
 
