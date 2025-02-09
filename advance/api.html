@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-Call</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color:black; color: white;">
+  <div id="container"> 
+    <button id="start">Click</button>
+
+    <div id="card">
+        <img id="myimage" src="" alt="image">
+        <p></p>
+    </div>
+</div>
+</body>
+
+<script>
+    const requesturl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requesturl)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            console.log(data.followers);
+            console.log(data.avatar_url);
+            document.getElementById('start').addEventListener('click' , function () {
+                let image = document.getElementById('myimage')
+                image.src = data.avatar_url;
+                document.querySelector('p').innerText = `Followers: ${data.followers}`
+            })
+
+            // let image = document.getElementById('myimage')
+            // image.src = data.avatar_url;
+            // document.getElementById('src').innerText.data.avatar_url 
+            // document.getElementById('card').innerHTML = `<br>${data.followers}`
+        }
+    }
+    xhr.send()
+</script>
+
+</html>
